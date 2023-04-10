@@ -1,0 +1,14 @@
+{
+    "name": "Chat_GPT",
+    "version": "1.0.0",
+    "description": "Your bot's description",
+    "main": "index.js",
+    "dependencies": {
+      "discord.js": "^13.2.0"
+    },
+    "scripts": {
+      "start": "node index.js"
+    },
+    "author": "Kent",
+    "license": "ISC"
+  }
