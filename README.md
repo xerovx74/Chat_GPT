@@ -9,7 +9,7 @@ A full video tutorial for this chat bot can be found [here](https://youtu.be/CB7
 1. Clone the repository to the current directory
 
 ```powershell
-git clone https://github.com/xerovx74/Chat_GPT.git .
+git clone https://github.com/xerovx74/Chat_GPT 
 ```
 
 2. Install all the dependencies
