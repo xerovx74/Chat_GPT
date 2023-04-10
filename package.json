@@ -1,14 +1,24 @@
 {
-    "name": "Chat_GPT",
-    "version": "1.0.0",
-    "description": "Your bot's description",
-    "main": "index.js",
-    "dependencies": {
-      "discord.js": "^13.2.0"
-    },
-    "scripts": {
-      "start": "node index.js"
-    },
-    "author": "Kent",
-    "license": "ISC"
+  "name": "Chat_GPT",
+  "version": "1.0.0",
+  "description": "Discord bot using OpenAI's GPT-3 for chat interactions",
+  "main": "index.js",
+  "author": "Kent",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xerovx74/Chat_GPT"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "discord.js": "^13.5.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "openai": "^3.0.0"
+  },
+  "engines": {
+    "node": "19.8.1"
   }
+}
