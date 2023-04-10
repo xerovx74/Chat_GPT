@@ -1,43 +1,38 @@
-const express = require('express');
+// Import required modules
+const express = require("express");
+const cors = require("cors");
+const openai = require("openai");
+
+// Create express app
 const app = express();
-const Discord = require('discord.js');
-const { createApi } = require('openai');
+const port = process.env.PORT || 3000;
 
-// Load environment variables from .env file
-require('dotenv').config();
+// Use cors middleware
+app.use(cors());
 
-// Create a new Discord client
-const client = new Discord.Client();
-const openai = createApi(process.env.OPENAI_API_KEY);
-
-// Log in to the Discord API
-client.login(process.env.DISCORD_TOKEN);
-
-// When the Discord client is ready, log a message to the console
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-
-// Set up a route for the homepage
-app.get('/', (req, res) => {
-  res.send('Your Discord bot is running!');
-});
-
-// Handle incoming messages from the Discord API
-client.on('message', async msg => {
-  if (msg.content.startsWith('!chatgpt')) {
-    const message = msg.content.slice(9).trim();
-    const response = await openai.complete({
-      engine: 'davinci-codex',
-      prompt: message,
-      maxTokens: 1024,
+// Define API endpoint
+app.get("/api/gpt", async (req, res) => {
+  const prompt = req.query.prompt;
+  const openaiApi = new openai.default({apiKey: process.env.OPENAI_API_KEY});
+  try {
+    const response = await openaiApi.complete({
+      engine: "davinci",
+      prompt: prompt,
+      maxTokens: 150,
       n: 1,
-      stop: ['\n']
+      stop: "\n",
     });
-    msg.reply(response.data.choices[0].text);
+    res.send(response.choices[0].text.trim());
+  } catch (err) {
+    console.error(err);
+    res.status(500).send(err);
   }
 });
 
+// Start server
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
 // Start the server
 app.listen(process.env.PORT, () => {
   console.log(`Your app is listening on port ${process.env.PORT}`);
