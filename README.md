@@ -3,6 +3,7 @@
 This is a Discord chat bot built using discord.js and the gpt-3.5-turbo model from Open AI. 
 
 !help will bring about the following statement.
+```powershell
 List of available commands:
 !weather [location] - Displays the current weather for the specified location. (50/day)
 !coinflip - Flips a coin and returns either heads or tails.
@@ -11,6 +12,7 @@ List of available commands:
 !image [query(s)] - Takes in a prompt as its argument and generates an image using a Stable Diffusion v1.5 model
 !imagine [query(s)] - Takes in a prompt as its argument and generates an image using Openjourney which adapts from the Midjourney images model
 !anime [query(s) - Takes in a prompt as its argument and generates an image using Fantasy.ai
+```
 
 
 ## How to setup
