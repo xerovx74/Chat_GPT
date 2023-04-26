@@ -1,6 +1,7 @@
 # ChatGPT Chat Bot
 
-This is a Discord chat bot built using discord.js and the gpt-3.5-turbo model from Open AI. I have custom build various command lines using various APIs to retrieve varying results. 
+This is a Discord chat bot built using discord.js and the gpt-3.5-turbo model from Open AI. 
+I have custom build various command lines using various APIs to retrieve varying results. 
 
 The bot will respond with the following list of commands when stating the !help command.
 ```powershell
