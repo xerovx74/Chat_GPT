@@ -1,8 +1,8 @@
 # ChatGPT Chat Bot
 
-This is a Discord chat bot built using discord.js and the gpt-3.5-turbo model from Open AI. 
+This is a Discord chat bot built using discord.js and the gpt-3.5-turbo model from Open AI. I have custom build various command lines using various APIs to retrieve varying results. 
 
-!help will bring about the following statement.
+The bot will respond with the following list of commands when stating the !help command.
 ```powershell
 List of available commands:
 !weather [location] - Displays the current weather for the specified location. (50/day)
