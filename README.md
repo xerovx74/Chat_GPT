@@ -12,9 +12,9 @@ List of available commands:
 !summarize - Summarizes long messages sent by other people in a text or voice channel. (currently not working)
 !image [query(s)] - Takes in a prompt as its argument and generates an image using a Stable Diffusion v1.5 model
 !imagine [query(s)] - Takes in a prompt as its argument and generates an image using Openjourney which adapts from the Midjourney images model
-!anime [query(s) - Takes in a prompt as its argument and generates an image using Fantasy.ai
+!anime [query(s)] - Takes in a prompt as its argument and generates an image using Fantasy.ai
 ```
-
+Currently running on Glitch cloud servers 24/7 through a custom script written on Replit that keeps the project running continuously using Uptimerobot.
 
 ## How to setup
 
